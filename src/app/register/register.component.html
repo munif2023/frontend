@@ -1,0 +1,71 @@
+  <H1>Register</H1>
+  <div class="rounded" style="background-color: white; margin: 20px; padding: 20px">
+    <form novalidate [formGroup]="myForm">
+
+
+      <div class="form-group">
+        <label for="inputusername">Enter username</label>
+        <input type="username" class="form-control" id="inputusername"
+               placeholder="Enter User Name" name="username"
+               formControlName="username">
+      </div>
+
+      <div class="form-group">
+        <label for="inputFirstName">Enter First Name</label>
+        <input type="firstname" class="form-control" id="inputFirstName"
+               placeholder="Enter first name" name="firstname"
+               formControlName="firstname">
+      </div>
+
+      <div class="form-group">
+        <label for="inputsecondname">Enter Second Name</label>
+        <input type="secondname" class="form-control" id="inputsecondname"
+               placeholder="Enter last name" name="secondname"
+               formControlName="secondname">
+      </div>
+
+      <div class="form-group">
+        <label for="inputlastname">Enter last name</label>
+        <input type="last_name" class="form-control" id="inputlastname"
+               placeholder="Enter first name" name="last_name"
+               formControlName="last_name">
+      </div>
+
+      <div class="form-group">
+        <label for="inputEmail">Email address</label>
+        <input type="email" class="form-control" id="inputEmail"
+               placeholder="Enter email" name="email"
+               formControlName="email">
+      </div>
+
+      <div class="form-group">
+        <label for="inputPassword">Password</label>
+        <input type="password" class="form-control"
+               formControlName="password"
+               id="inputPassword" placeholder="password" name="password">
+      </div>
+
+      <div class="form-group">
+        <label for="userphone">Enter Your phone number</label>
+        <input type="number" class="form-control"
+               formControlName="userphone"
+               id="userphone" placeholder="Enter your phone number" name="userphone">
+      </div>
+
+
+      <div class="form-group">
+        <label for="role">Select Role:</label>
+        <select class="form-control" id="role" formControlName="role" name="role">
+          <option value="ROLE_USER">USER</option>
+          <option value="ROLE_ORGANIZER">ORGANIZER</option>
+        </select>
+      </div>
+
+
+
+
+
+      <button type="submit" class="btn btn-sample"
+              (click)="onSubmit()">Submit</button>
+    </form>
+  </div>

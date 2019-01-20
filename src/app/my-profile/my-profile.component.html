@@ -1,0 +1,11 @@
+<div  *ngIf="user">
+  <h2>My Profile</h2>
+  <ul class="list-group">
+    <li class="list-group-item">ID: {{ user.id }}</li>
+    <li class="list-group-item">Name: {{ user.firstname }} {{user.last_name}}</li>
+    <li class="list-group-item">Email: {{ user.email }}</li>
+    <td>
+      <button [routerLink]="['/user', user.id]" class="btn btn-sample" style="margin-top: 10px">Edit</button>
+    </td>
+  </ul>
+</div>

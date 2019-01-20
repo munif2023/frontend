@@ -1,0 +1,13 @@
+<div class="row" >
+  <div class="col-md-6">
+    <h2>Events Not Approved</h2>
+    <div>
+      <ul style="list-style-type:disc" *ngFor="let event of events$ " class="list-group-item" (click)="getEvent(event)">
+        {{event.eventid}} - {{event.eventname}} - {{event.city}}
+        <button (click)="getEvent(event)" [routerLink]="['/event/', event.eventid]" class="btn btn-sample" style="float: right;">Details</button>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
